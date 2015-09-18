@@ -13,3 +13,43 @@
  *= require_tree .
  *= require_self
  */
+
+
+body {
+  margin: 0px;
+  background-color: black;
+  font-family: "Dosis", sans-serif;
+}
+
+#main-page {
+  background-image: url('dark-wood.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 660px;
+  color: #73592D;
+}
+
+#spacer {
+  height: 40px;
+}
+
+#menu {
+  margin: auto;
+  padding: 50px 40px 80px 40px;
+  background-image: url('paper-texture-2.jpg');
+  background-position: center;
+  text-align: center;
+  width: 350px;
+}
+
+#new-menu-link { text-align: center; }
+
+#bar-name { text-transform: uppercase; }
+
+#bar-name p {
+  font-size: 30px;
+  margin: 0px;
+  padding-bottom: 8px;
+}
+
+#menu-items { font-size: 16px; }

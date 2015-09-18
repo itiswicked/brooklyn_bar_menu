@@ -1,0 +1,15 @@
+
+
+<div id="main-page">
+  <div id="spacer"></div>
+  <div id="menu">
+    <div id="bar-name">
+      <p><%= @bar_name %></p>
+    </div>
+    <div id="menu-items">
+      <% @menu.each do |item| %>
+        <p><%= "#{item[:title]} #{item[:price]}" %></p>
+      <% end %>
+    </div>
+  </div>
+</div>
