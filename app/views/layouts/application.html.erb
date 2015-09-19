@@ -3,18 +3,20 @@
 <head>
   <title>Brooklyn Bar Menu</title>
   <link href='https://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application',
+                              media: 'all',
+                              'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <%= yield %>
-  <div class="footer">
-    <div id="new-menu-link">
-      <h3><%= link_to "Generate Another Menu",
-                     { controller: 'menu', action: 'new'} %></h3>
+  <div id="main-page">
+    <div id="spacer"></div>
+    <div id="menu">
+        <%= yield %>
     </div>
-</div>
-
+  </div>
+  <div class="footer">
+  </div>
 </body>
 </html>

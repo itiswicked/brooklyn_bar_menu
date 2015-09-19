@@ -1,3 +1,3 @@
 class BarName < ActiveRecord::Base
-  belongs_to :menu
+  has_many :menus
 end

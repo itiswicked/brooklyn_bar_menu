@@ -1,4 +1,4 @@
 class Menu < ActiveRecord::Base
-  has_many :bar_names
+  belongs_to :bar_name
   has_many :menu_items
 end

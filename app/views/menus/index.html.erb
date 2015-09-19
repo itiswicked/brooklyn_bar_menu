@@ -1,0 +1,11 @@
+<div class="title">
+  <p>Menus</p>
+</div>
+<div class="links">
+  <% @menus.each do |menu| %>
+    <p><%= link_to "#{menu.bar_name.name}", menu_path(menu) %></p>
+  <% end %>
+  <div class="link-box">
+    <%= link_to "New Menu", new_menu_path %>
+  </div>
+</div>
