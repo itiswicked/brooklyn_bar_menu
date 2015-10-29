@@ -3,7 +3,7 @@
 </div>
 
 <% @menu_items.each do |menu_item| %>
-  <p><%= "#{menu_item.item}: #{menu_item.price}" %></p>
+  <p><%= "#{menu_item.item} #{menu_item.price}" %></p>
 <% end %>
 <div class="links link-box">
   <%= link_to "New Menu", new_menu_path %>

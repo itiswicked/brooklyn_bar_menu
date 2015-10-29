@@ -41,9 +41,7 @@ class MenusController < ApplicationController
   end
 
   def data
-    File.open("static_data.yml", "r") do |f|
-      YAML.load(f)
-    end
+    File.open("static_data.yml", "r") { |f| YAML.load(f) }
   end
 
   def bar_name
@@ -61,28 +59,36 @@ class MenusController < ApplicationController
 
   def menu_item
     if percent_chance? 20 # Make three food item meal
-      percent_chance?(50) ? three_food_item(",") : three_food_item("&")
+      percent_chance?(50) ? three_food_item(", ") : three_food_item(" & ")
     elsif percent_chance? 40 # Make two food item meal
-      percent_chance?(50) ? two_food_item("&") : two_food_item("with")
+      percent_chance?(50) ? two_food_item(" & ") : two_food_item(" with ")
     else # one food item meal
       one_food_item
     end
   end
 
   def three_food_item(coupler)
-    one_food_item + "#{coupler} " + one_food_item + " & " + one_food_item
+    one_food_item + "#{coupler}" + one_food_item + " with " + one_food_item
   end
 
   def two_food_item(coupler)
-    one_food_item + " #{coupler} " + one_food_item
+    one_food_item + "#{coupler}" + one_food_item
   end
 
   def one_food_item
-    food_item = ""
-    food_item += pull_word_from(data["adjectives"]) + " "  if percent_chance? 55
-    food_item += pull_word_from(data["foods"])
-    food_item += " " + pull_word_from(data["shapes"]) if percent_chance? 40
-    food_item
+    adjective + food + shape
+  end
+
+  def adjective
+    percent_chance?(55) ? pull_word_from(data["adjectives"]) + " " : ""
+  end
+
+  def food
+    pull_word_from(data["foods"])
+  end
+
+  def shape
+    percent_chance?(40) ? " " + pull_word_from(data["shapes"]) : ""
   end
 
   def percent_chance?(num)
