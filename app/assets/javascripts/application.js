@@ -14,8 +14,13 @@
 //= require jquery_ujs
 
 
-var fileNames = ['wood1.jpg', 'wood2.jpg', 'wood3.jpg',
-                 'wood4.jpg', 'dark-wood.jpg'];
+var fileNames = [
+  'wood1.jpg',
+  'wood2.jpg',
+  'wood3.jpg',
+  'wood4.jpg',
+  'dark-wood.jpg'
+];
 
 var getRandomPic = function(files){
   return "/assets/" + files[Math.floor(Math.random() * fileNames.length)];
