@@ -12,5 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+
+
+var fileNames = ['wood1.jpg', 'wood2.jpg', 'wood3.jpg',
+                 'wood4.jpg', 'dark-wood.jpg'];
+
+var getFileName = function(){
+  return "app/assets/" + fileNames[Math.floor(Math.random() * fileNames.length)];
+}
+
+document.getElementById('main-page').style.backgroundImage = "url('" + getFileName() + "')";
