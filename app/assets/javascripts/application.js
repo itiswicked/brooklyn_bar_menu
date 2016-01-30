@@ -17,8 +17,10 @@
 var fileNames = ['wood1.jpg', 'wood2.jpg', 'wood3.jpg',
                  'wood4.jpg', 'dark-wood.jpg'];
 
-var getFileName = function(){
-  return "app/assets/" + fileNames[Math.floor(Math.random() * fileNames.length)];
+var getRandomPic = function(files){
+  return "/assets/" + files[Math.floor(Math.random() * fileNames.length)];
 }
 
-document.getElementById('main-page').style.backgroundImage = "url('" + getFileName() + "')";
+$(document).ready(function(){
+  $("body").css({ 'background-image': "url(" + getRandomPic(fileNames) + ")" });
+});
