@@ -31,7 +31,6 @@ class MenusController < ApplicationController
         end
         redirect_to menu_path(@menu)
       else
-        # redirect_to menu_path(last_menu)
         redirect_to menus_path
       end
     else
