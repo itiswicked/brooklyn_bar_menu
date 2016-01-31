@@ -5,9 +5,9 @@
 <% @menu_items.each do |menu_item| %>
   <p><%= "#{menu_item.item} #{menu_item.price}" %></p>
 <% end %>
-<div class="links link-box">
-  <%= link_to "New Menu", new_menu_path %>
+<div class="link-box">
+  <%= link_to "New Menu", menus_path, method: :post %>
 </div>
-<div class="links link-box">
+<div class="link-box">
   <%= link_to "Menus", menus_path %>
 </div>
