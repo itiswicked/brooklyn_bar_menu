@@ -6,6 +6,7 @@
     <p><%= link_to "#{menu.bar_name.name}", menu_path(menu) %></p>
   <% end %>
   <div class="link-box">
-    <%= link_to "New Menu", new_menu_path %>
+    <%= link_to "New Menu", menus_path, method: :post %>
   </div>
 </div>
+<i class="material-icons">expand_more</i>

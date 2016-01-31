@@ -2,21 +2,17 @@
 <html>
 <head>
   <title>Brooklyn Bar Menu</title>
-  <link href='https://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
-  <%= stylesheet_link_tag 'application',
-                           media: 'all',
-                          'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Dosis' %>
+  <%= stylesheet_link_tag 'https://fonts.googleapis.com/icon?family=Material+Icons' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div id="main-page">
-    <div id="spacer"></div>
-    <div id="menu">
-        <%= yield %>
-    </div>
-  </div>
-  <div class="footer">
+  <div class="menu">
+
+    <%= yield %>
+
   </div>
 </body>
 </html>

@@ -18,30 +18,34 @@
 body {
   margin: 0px;
   font-family: "Dosis", sans-serif;
-}
-
-#main-page {
-  /*background-image: url('dark-wood.jpg');*/
   background-position: center;
   background-repeat: no-repeat;
-  height: 660px;
-  color: #73592D;
 }
 
-#spacer {
-  height: 40px;
+p {
+  margin: 14px auto;
 }
 
-#menu {
-  margin: auto;
-  padding: 50px 40px 80px 40px;
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu {
+  border-radius: 5px;
+  box-shadow: 15px 15px 60px 19px rgba(0,0,0,0.58);
+  margin: 40px auto 0;
+  padding: 50px 40px;
   background-image: image-url('paper-texture-2.jpg');
   background-position: center;
   text-align: center;
   width: 350px;
+  height: 470px;
 }
 
-#bar-name { text-transform: uppercase; }
+#bar-name {
+  text-transform: uppercase;
+}
 
 .title p {
   font-size: 30px;
@@ -49,15 +53,15 @@ body {
   padding-bottom: 8px;
 }
 
-.links a {
-  text-decoration: none;
-  color: inherit;
-}
-
 .link-box {
   display: inline-block;
   border: 2px solid #D6C9B2;
   padding: 5px;
+}
+
+.links {
+  height: 420px;
+  overflow: auto;
 }
 
 #menu-items { font-size: 16px; }
