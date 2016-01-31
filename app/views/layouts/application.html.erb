@@ -9,6 +9,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <style>
+    html {
+      background-image: url(<%= asset_path random_image %>);
+    }
+  </style>
   <div class="menu">
 
     <%= yield %>
